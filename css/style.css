@@ -4,63 +4,150 @@
   padding: 0;
   box-sizing: border-box;
 }
-.container {
+.float-left {
+  float: left;
+}
+
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+
+/* Contenitore principale */
+#container {
   height: 100vh;
   width: 100vw;
-  display: flex;
 }
-
-/* REGOLE SPECIFICHE ---------------------------------------------------------*/
-
+/* Contenitore main page */
+#main-page {
+  height: calc(100% - 90px);
+  width: 100%;
+}
 /* Nav-bar sx */
-.nav-bar {
+#nav-bar {
   height: 100%;
   width: 15%;
-  background-color: rgba(0,0,0,.8);
+  background-color: rgba(0,0,0,.9);
+  padding: 24px 0;
 }
-
 /* Main view container */
-.main-view {
+#main-view {
   height: 100%;
   width: 85%;
-  padding: 40px 35px;
+  padding: 35px;
+  overflow: auto;
   background-image: linear-gradient(to right bottom, rgb(58, 91, 95), rgb(0, 0, 0)), linear-gradient(transparent, rgb(0, 0, 0) 70%);
 }
-
 /* Playing-bar */
-.playing-bar {
+#playing-bar {
   height: 90px;
   width: 100%;
   background-color: #282828;
   border-top: solid 1px rgba(0,0,0,.8);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
 }
 
-/* Visualizzazione da 1024px in giu) */
-@media (max-width: 1024px) {
+/* REGOLE SPECIFICHE ---------------------------------------------------------*/
 
+/* Nav-bar sx ----------------------------------------------------------------*/
+.nav-header{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 18px 24px;
+  width: 131px;
+}
+.nav-sx ul {
+  list-style: none;
+}
+.nav-sx li {
+  display: block;
+  padding: 10px 0;
+}
+.nav-sx a {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.nav-sx a:hover {
+  color: #fff;
+}
+
+/* Main view container -------------------------------------------------------*/
+.nav {
+  display: flex;
+  justify-content: center;
+}
+.nav ul {
+  list-style: none;
+}
+.nav li {
+  display: inline-block;
+  position: relative;
+}
+.nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #b3b3b3;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 0 20px;
+  letter-spacing: 2px;
+}
+.nav a:focus{
+  color: #fff;
+}
+.nav a:focus::after {
+  content: "";
+  height: 2px;
+  background-color: #1db954;
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -15px;
+  margin-bottom: -2px;
+}
+
+/* Playing-bar ---------------------------------------------------------------*/
+
+
+/* REGOLE RESPONSIVE ---------------------------------------------------------*/
+
+
+/* Visualizzazione da 1024px in giu) */
+@media screen and (max-width: 1024px) {
+  /* Nav-bar sx */
+
+}
+
+/* Visualizzazione da 768px in giu) */
+@media screen and (max-width: 768px) {
+  /* Nav-bar sx */
+  #nav-bar {
+    width: 115px;
+  }
+  /* Main view container */
+  #main-view {
+    width: calc(100% - 115px);
+  }
 }
 
 /* Visualizzazione da 576px in giu) */
-@media (max-width: 576px) {
+@media screen and (max-width: 576px) {
   /* Nav-bar sx */
-  .nav-bar {
+  #nav-bar {
     height: 80px;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 998;
+    background-color: rgba(0,0,0,.9);
   }
 
   /* Main view container */
-  .main-view {
+  #main-view {
     height: 100%;
     width: 100%;
-    overflow: scroll;
     padding: 110px 35px;
   }
 }
