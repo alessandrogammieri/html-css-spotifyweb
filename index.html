@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="media/spotify-icon.png" type="Spotify Favicon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Style CSS -->
     <link rel="stylesheet" href="css/style.css">
     <title>Spotify Web AG</title>
@@ -175,7 +176,38 @@
         </div>
       </section>
       <section id="playing-bar">
-
+        <div class="box-playing">
+          <div class="playing-left">
+            <img src="media/cover11.jfif" width="56" alt="">
+            <div class="box-left">
+              <p class="text-song">Word Up!</p>
+              <p class="text-artist">Korn</p>
+            </div>
+            <img class="heart" src="media/heart.png" width="15" alt="">
+          </div>
+          <div class="playing-center">
+            <div class="player-control">
+              <img src="media/random.png" width="18" height="18" alt="">
+              <img src="media/left.png" width="18" height="18" alt="">
+              <img src="media/play.png" width="30" alt="">
+              <img src="media/right.png" width="18" height="18" alt="">
+              <img src="media/circle.png" width="18" height="18" alt="">
+            </div>
+            <div class="player-bar">
+              <label class="text-artist time-margin">0:32</label>
+              <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+              <label class="text-artist time-margin">2:35</label>
+            </div>
+          </div>
+          <div class="playing-right">
+            <img src="media/libreria.png" width="18" height="18" alt="">
+            <img src="media/stereo.png" width="18" height="18" alt="">
+            <img src="media/volume.png" width="18" height="18" alt="">
+            <div class="playerbar-right">
+              <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </body>
